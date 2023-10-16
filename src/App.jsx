@@ -10,7 +10,7 @@ export function App() {
 
       <header>
         <nav>
-          <img src="./src/assets/logo.svg" alt="USTAY logo" />
+          <img src="public/static/images/logo.svg" alt="USTAY logo" />
         </nav>
       </header>
     

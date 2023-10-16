@@ -17,17 +17,17 @@ export function LeadBoard(props) {
                         
                         <div className={styles.firstPlaceBar}>
                             <span> {props.thisMonthFirstPlace} </span>
-                            <img src="./src/assets/1PlaceBar.svg" alt="First Place Bar"/>
+                            <img src="public/static/images/1PlaceBar.svg" alt="First Place Bar"/>
                         </div>
 
                         <div className={styles.secondPlaceBar}>
                             <span> {props.thisMonthSecondPlace} </span>
-                            <img src="./src/assets/2PlaceBar.svg" alt="Second Place Bar"/>
+                            <img src="public/static/images/2PlaceBar.svg" alt="Second Place Bar"/>
                         </div>
 
                         <div className={styles.thirdPlaceBar}>
                             <span> {props.thisMonthThirdPlace} </span>
-                            <img src="./src/assets/3PlaceBar.svg" alt="Third Place Bar"/>
+                            <img src="public/static/images/3PlaceBar.svg" alt="Third Place Bar"/>
                         </div>
 
                     </div>
@@ -44,17 +44,17 @@ export function LeadBoard(props) {
 
                     <div className={styles.secondPlaceBar}>
                         <span> {props.lastMonthSecondPlace} </span>
-                        <img src="./src/assets/2PlaceBar.svg" alt="Second Place Bar"/>
+                        <img src="public/static/images/2PlaceBar.svg" alt="Second Place Bar"/>
                     </div>
                         
                         <div className={styles.firstPlaceBar}>
                             <span> {props.lastMonthFirstPlace} </span>
-                            <img src="./src/assets/1PlaceBar.svg" alt="First Place Bar"/>
+                            <img src="public/static/images/1PlaceBar.svg" alt="First Place Bar"/>
                         </div>
 
                         <div className={styles.thirdPlaceBar}>
                             <span> {props.lastMonthThirdPlace} </span>
-                            <img src="./src/assets/3PlaceBar.svg" alt="Third Place Bar"/>
+                            <img src="public/static/images/3PlaceBar.svg" alt="Third Place Bar"/>
                         </div>
 
                     </div>
@@ -71,17 +71,17 @@ export function LeadBoard(props) {
 
                     <div className={styles.thirdPlaceBar}>
                         <span> {props.penultimateMonthThirdPlace} </span>
-                        <img src="./src/assets/3PlaceBar.svg" alt="Third Place Bar"/>
+                        <img src="public/static/images/3PlaceBar.svg" alt="Third Place Bar"/>
                     </div>
 
                         <div className={styles.secondPlaceBar}>
                             <span> {props.penultimateMonthFirstPlace} </span>
-                            <img src="./src/assets/2PlaceBar.svg" alt="Second Place Bar"/>
+                            <img src="public/static/images/2PlaceBar.svg" alt="Second Place Bar"/>
                         </div>
 
                         <div className={styles.firstPlaceBar}>
                             <span> {props.penultimateMonthFirstPlace} </span>
-                            <img src="./src/assets/1PlaceBar.svg" alt="First Place Bar"/>
+                            <img src="public/static/images/1PlaceBar.svg" alt="First Place Bar"/>
                         </div>
 
                     </div>
