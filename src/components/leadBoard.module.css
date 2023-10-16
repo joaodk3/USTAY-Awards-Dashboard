@@ -1,0 +1,65 @@
+.leadBoard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+.thisMonthContainer, .lastMonthContainer, .penultimateMonthContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.monthResults {
+    display: flex;
+    gap: 2rem;
+}
+
+.monthHeader {
+    background-color:  #FFFFFF0D;
+    padding: 0.75rem;
+    width: fit-content;
+    height: 1.875rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthHeader span {
+    background-color: transparent;
+}
+
+.firstPlaceBar, .secondPlaceBar, .thirdPlaceBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    justify-content: end;
+    align-items: center;
+}
+
+.monthResults span {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1470px) {
+    .firstPlaceBar > img, .secondPlaceBar > img,  .thirdPlaceBar > img{
+        width: 60%;
+
+    }
+    .monthResults {
+        gap: 0px; 
+    }
+
+    .monthHeader {
+        padding: 1rem;
+        width: fit-content;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+
+}
