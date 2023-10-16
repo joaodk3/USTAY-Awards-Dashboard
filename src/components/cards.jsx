@@ -15,7 +15,7 @@ export function Card() {
                         B2Visa = "12"
                         EB3 = "02"
                         GreenCard = "01"
-                        image= {"/static/images/badge1.svg"}
+                        image= {"static/images/badge1.svg"}
                     />
                     <SingleCard 
                         userName = "Rafael G."
@@ -25,7 +25,7 @@ export function Card() {
                         B2Visa = "9"
                         EB3 = "2"
                         GreenCard = "1"
-                        image = {"public/static/images/badge2.svg"}
+                        image = {"static/images/badge2.svg"}
                     />
                     <SingleCard 
                         userName = "Carlos E."
@@ -35,7 +35,7 @@ export function Card() {
                         B2Visa = "12"
                         EB3 = "02"
                         GreenCard = "01"
-                        image= {"public/static/images/badge3.svg"}
+                        image= {"static/images/badge3.svg"}
                     />
 
                 </div>
