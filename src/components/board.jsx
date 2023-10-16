@@ -8,7 +8,7 @@ export function Board() {
         <div className= {styles.boardHeader}>
             <header>
                 <div className={styles.boardHeaderContent}>
-                    <img src="public/static/images/medal.svg" alt="Small red medal"/>
+                    <img src={"/static/images/medal.svg"} alt="Small red medal"/>
                     <h2> <strong>Lead Board</strong> of last three months</h2>
                 </div>
             </header>

@@ -12,7 +12,7 @@ export function Header() {
 
             <div className={styles.headerRight}> 
                 <div>
-                    <img src="public/static/images/vector.svg" alt="Icone seta para direita"/> 
+                    <img src={"static/images/Vector.svg"} alt="Icone seta para direita"/> 
                     <p> Others </p>               
                 </div>
 
