@@ -16,21 +16,21 @@ export function Board() {
 
         <div>
             <LeadBoard
-             thisMonth = "October"
-             lastMonth = "September"
-             penultimateMonth = "August"
+             thisMonth = "September"
+             lastMonth = "August"
+             penultimateMonth = "July"
 
-             thisMonthFirstPlace = "Joao V."
-             thisMonthSecondPlace = "Rafael G."
-             thisMonthThirdPlace = "Carlos E."
+             thisMonthFirstPlace = "Gabriela F."
+             thisMonthSecondPlace = "Alexia S."
+             thisMonthThirdPlace = "Ana Luisa S."
 
-             lastMonthFirstPlace = "Rafael G."
-             lastMonthSecondPlace = "Joao V."
-             lastMonthThirdPlace = "Carlos E."
+             lastMonthFirstPlace = "Gabriela F."
+             lastMonthSecondPlace = "Alexia S."
+             lastMonthThirdPlace = "Ana Luisa S."
 
-             penultimateMonthFirstPlace = "Carlos E."
-             penultimateMonthSecondPlace = "Rafael G."
-             penultimateMonthThirdPlace = "Joao V."
+             penultimateMonthFirstPlace = "Isabella S."
+             penultimateMonthSecondPlace = "Alexia S."
+             penultimateMonthThirdPlace = "Jacqueline A."
              />
              
         </div>

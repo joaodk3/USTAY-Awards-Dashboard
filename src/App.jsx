@@ -26,6 +26,10 @@ export function App() {
         <Card />
       </div>
 
+      <footer>
+        <p> @joaodk3 </p>
+      </footer>
+
     </div>
 
   )

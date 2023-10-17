@@ -13,18 +13,23 @@ export function SingleCard(props) {
 
                 <div className={styles.services}>
                     <div>
-                        <span> Jornada F1 </span> 
-                        <span> {props.JornadaF1} </span>
+                        <span> Status Change </span> 
+                        <span> {props.StatusChange} </span>
                     </div>
 
                     <div>
-                        <span> B2 Status </span> 
-                        <span> {props.B2Status} </span>
+                        <span> ESL and CC </span> 
+                        <span> {props.ESL_CC} </span>
                     </div>
 
                     <div>
-                        <span> B2 Visa </span> 
-                        <span> {props.B2Visa} </span>
+                        <span> Undergraduate </span> 
+                        <span> {props.College} </span>
+                    </div>
+
+                    <div>
+                        <span> Graduate </span> 
+                        <span> {props.Graduate} </span>
                     </div>
 
                     <div>

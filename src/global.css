@@ -47,3 +47,12 @@ header nav {
     margin: 5rem auto;
 }
 
+footer p { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+    color: white;
+    font-size: 0.8rem;
+}
+

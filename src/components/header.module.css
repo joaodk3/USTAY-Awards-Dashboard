@@ -22,6 +22,10 @@
     font-size: 1.2rem;
 }
 
+.headerRight:hover{
+    cursor: pointer;
+}
+
 .headerRight > div {
     display:flex;
     gap: 1rem;
