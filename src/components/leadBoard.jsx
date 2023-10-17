@@ -74,7 +74,7 @@ export function LeadBoard(props) {
                     </div>
 
                         <div className={styles.secondPlaceBar}>
-                            <span> {props.penultimateMonthFirstPlace} </span>
+                            <span> {props.penultimateMonthSecondPlace} </span>
                             <img src={"static/images/2PlaceBar.svg"} alt="Second Place Bar"/>
                         </div>
 
