@@ -1,8 +1,3 @@
-# React + Vite
+#This is a project developed for USTAY => A Dashboard that displays a list of sales results for respective partners.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The stack uses React + Vite in the frontend and in the future the backend will consist of Node.js utilizing express to construct API calls that are connect to a PostgreSQL database to retrieve the sales results and statistics.
