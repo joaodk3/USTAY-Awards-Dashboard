@@ -1,6 +1,7 @@
 .leadBoard {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 3rem;
     gap: 3rem;
 }
@@ -62,4 +63,15 @@
         font-size: 1rem;
     }
 
+}
+
+@media (max-width: 800px) {
+    .leadBoard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        gap: 3rem;
+    }
 }

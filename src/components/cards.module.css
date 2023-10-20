@@ -1,13 +1,3 @@
-.firstRowCards, .secondRowCards, .thirdRowCards {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem; 
-}
-
-.secondRowCards, .thirdRowCards {
-    margin-top: 2rem;
-}
-
 .cardHeader {
     display: flex;
     justify-content: center;
@@ -18,6 +8,8 @@
     gap: 2rem;
 }
 
-.cardHeader span {
-    font-size: 1.5rem;
+.cardsContent {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

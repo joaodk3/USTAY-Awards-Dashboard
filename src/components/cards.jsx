@@ -5,12 +5,13 @@ export function Card() {
     return (
 
         <div className={styles.cards}>
+            
             <div className={styles.cardHeader}>
                 <h2> All Time Ranking </h2>
                 <span> 🏆 </span>
             </div>
 
-            <div>
+            <div className={styles.cardsContent}>
                 <div className={styles.firstRowCards}>
                     <SingleCard  
                         userName = "Gabriela F."
