@@ -6,25 +6,35 @@
     padding: 1rem;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .cards {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
-.firstRowCards, .secondRowCards, .thirdRowCards {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.cardsContent {
     flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.option select {
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0.6rem;
+    border-color: rgb(255, 255, 255, 0.1);
+    border-width: 0.2rem;
 }
 
 @media (max-width: 850px) {
-    .firstRowCards, .secondRowCards, .thirdRowCards {
-        display: flex;
-        flex-direction: column;
+    .cardsContent {
         justify-content: center;
-        align-items: center;
     }
+    
 }

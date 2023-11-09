@@ -7,7 +7,7 @@ export function SingleCard(props) {
             <div className={styles.card}>
                 <div className={styles.cardHeader}>
                     <h3> {props.userName} </h3>
-                    <span> {props.points}pts </span>
+                    <span> ${props.points} </span>
                     <img src={props.image} />
                 </div>
 
@@ -30,6 +30,11 @@ export function SingleCard(props) {
                     <div>
                         <span> Graduate </span> 
                         <span> {props.Graduate} </span>
+                    </div>
+
+                    <div>
+                        <span> Visa </span>
+                        <span> {props.Visa} </span>
                     </div>
 
                     <div>
