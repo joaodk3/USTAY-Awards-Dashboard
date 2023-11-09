@@ -8,8 +8,25 @@
     gap: 2rem;
 }
 
-.cardsContent {
+.cards {
+    border: 1px solid blue;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.firstRowCards, .secondRowCards, .thirdRowCards {
+    border: 1px solid blue;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
     flex-wrap: wrap;
+}
+
+@media (max-width: 850px) {
+    .firstRowCards, .secondRowCards, .thirdRowCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
