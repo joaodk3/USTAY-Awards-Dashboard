@@ -9,13 +9,11 @@
 }
 
 .cards {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
 }
 
 .firstRowCards, .secondRowCards, .thirdRowCards {
-    border: 1px solid blue;
     display: flex;
     width: 100%;
     justify-content: space-around;
