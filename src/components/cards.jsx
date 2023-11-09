@@ -15,26 +15,26 @@ export function Card() {
                 <div className={styles.firstRowCards}>
                     <SingleCard  
                         userName = "Gabriela F."
-                        points = "506"
+                        points = "735"
                         College = "0"
                         Graduate = "2"
-                        ESL_CC = "5"
-                        StatusChange = "4"
-                        Visa = "0"
+                        ESL_CC = "7"
+                        StatusChange = "7"
+                        Visa = "2"
                         EB3 = "0"
                         GreenCard = "0"
                         image= {"static/images/badge1.svg"}
                     />
                     <SingleCard 
                         userName = "Alexia S."
-                        points = "278"
+                        points = "589"
                         College = "0"
                         Graduate = "0"
-                        ESL_CC = "4"
-                        StatusChange = "5"
+                        ESL_CC = "5"
+                        StatusChange = "9"
                         Visa = "0"
                         EB3 = "0"
-                        GreenCard = "0"
+                        GreenCard = "1"
                         image = {"static/images/badge2.svg"}
                     />
                     <SingleCard 
