@@ -1,5 +1,5 @@
 import styles from './loginForm.module.css';
-import { Link } from "react-router-dom";
+
 
 export function LoginForm() {
     return (  
@@ -12,8 +12,8 @@ export function LoginForm() {
 
                     <div className = {styles.loginContent}>
                         <form className = {styles.loginForm}>
-                                <input type='email' id='loginEmail' placeholder='Email'/>
-                                <input type='password' id='loginPassword' placeholder='Password' />
+                                <input className={styles.input} type='email' id='loginEmail' placeholder='Email'/>
+                                <input className={styles.input} type='password' id='loginPassword' placeholder='Password' />
                                 <input className={styles.submit} type='submit' id='submitForm' value='Log in' />
                         </form>
                     </div>
