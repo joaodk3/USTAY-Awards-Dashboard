@@ -16,7 +16,7 @@ export function Header() {
                     <img src={"static/images/Vector.svg"} alt="Icone seta para direita"/> 
                     <li> <Link to='/'> Dashboard </Link> </li>               
                 </div>
-                    <li> <Link to="/pages"> Admin </Link> </li>
+                    <li> <Link to="/login"> Admin </Link> </li>
             </div>
 
         </div>
