@@ -1,6 +1,6 @@
 # USTAY Sales Dashboard
 
-Welcome to the USTAY Sales Dashboard! This React Vite CSS application is designed to provide a comprehensive overview of the sales data for USTAY company. The dashboard calculates and displays total sales through intuitive cards, graphs, and statistical information in sales orders. Additionally, an admin can log in through an authentication process and edit the website database, which is stored locally in a JSON file, allowing for dynamic updates to the displayed information.
+Welcome to the USTAY Sales Dashboard! This React Vite CSS application is designed to provide a comprehensive overview of the sales data for USTAY company. The dashboard calculates and displays total sales through intuitive cards, graphs, and statistical information in sales orders. Additionally, an admin can log in through an authentication process and edit the website database, which is stored locally in a JSON file and is manipulated with Nodejs, allowing for dynamic updates to the displayed information.
 
 ## Usage
 
@@ -22,11 +22,4 @@ As an admin, you can edit the website database locally. Make changes to the JSON
 - React
 - Vite
 - CSS
-
-## Contributing
-
-If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- Nodejs
