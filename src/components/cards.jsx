@@ -254,8 +254,6 @@ export function Card() {
         }
     });
 
-    console.log(sortedCardData);
-
     return (
 
         <div className={styles.cards}>
