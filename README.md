@@ -1,3 +1,32 @@
-#This is a project developed for USTAY => A Dashboard that displays a list of sales results for respective partners.
+# USTAY Sales Dashboard
 
-The stack uses React + Vite in the frontend and in the future the backend will consist of Node.js utilizing express to construct API calls that are connect to a PostgreSQL database to retrieve the sales results and statistics.
+Welcome to the USTAY Sales Dashboard! This React Vite CSS application is designed to provide a comprehensive overview of the sales data for USTAY company. The dashboard calculates and displays total sales through intuitive cards, graphs, and statistical information in sales orders. Additionally, an admin can log in through an authentication process and edit the website database, which is stored locally in a JSON file, allowing for dynamic updates to the displayed information.
+
+## Usage
+
+Visit the USTAY Sales Dashboard at [http://www.ustaywards.com](http://www.ustaywards.com) to explore the sales data presented on the dashboard, including cards, graphs, and statistical information.
+
+### Authentication
+
+To access admin features:
+
+1. Navigate to the login page.
+2. Enter the admin credentials.
+
+### Database Editing
+
+As an admin, you can edit the website database locally. Make changes to the JSON file as needed to update the displayed information on the dashboard.
+
+## Technologies Used
+
+- React
+- Vite
+- CSS
+
+## Contributing
+
+If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
