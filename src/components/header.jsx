@@ -1,4 +1,5 @@
 import styles from './header.module.css';
+import { Link } from "react-router-dom";
 
 export function Header() {
     return (
@@ -13,13 +14,9 @@ export function Header() {
             <div className={styles.headerRight}> 
                 <div>
                     <img src={"static/images/Vector.svg"} alt="Icone seta para direita"/> 
-                    <p> Others </p>               
+                    <li> <Link to='/'> Dashboard </Link> </li>               
                 </div>
-
-                <button type="button"> 
-                    Admin
-                </button>
-
+                    <li> <Link to="/pages"> Admin </Link> </li>
             </div>
 
         </div>

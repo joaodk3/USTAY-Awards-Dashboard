@@ -22,27 +22,24 @@
     font-size: 1.2rem;
 }
 
-.headerRight:hover{
-    cursor: pointer;
-}
-
 .headerRight > div {
     display:flex;
     gap: 1rem;
 }
 
-.headerRight button { 
+.headerRight li { 
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 7rem;
     height: 3.5rem;
     font-weight: bold;
-    padding: 1rem, 1.5rem, 1rem, 1.5rem;
-    border: none; 
-    border-radius: 0.25rem;
-    gap: 0.625rem;
-    background: #FFFFFF0D;
     margin-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
+
 
 @media (max-width: 800px) {
     .headerContainer {

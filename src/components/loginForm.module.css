@@ -1,0 +1,61 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20rem;
+    padding: 5rem;
+    background-color: #171924;
+    border-radius: 20px;
+    gap: 2rem;
+}
+
+.loginHeader, .loginHeader h1 {
+    background-color: #171924;
+}
+
+.loginContent form {
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #171924;
+}
+
+.loginContent form input, .loginContent form input{
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.loginContent form input[type="submit"]:hover {
+    background-color: white;
+    border: 8px solid black;
+    box-shadow: 3px 3px black;
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+@media (min-width: 390px) {
+    .loginHeader h1 {
+        font-size: 1.5rem;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
