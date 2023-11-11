@@ -27,5 +27,5 @@ As an admin, you can view statistical facts and edit the database: select, inser
 - Vite
 - CSS
 - Nodejs
-- RestAPIS
+- RestAPIs
 - SQL
