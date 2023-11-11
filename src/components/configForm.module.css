@@ -1,3 +1,90 @@
-.test {
-    color: white;
+.table {
+    border-radius: 8px;
+    height: 40rem;
 }
+
+
+.tableHeader {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tableHeader span {
+    padding: 0.75rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    background-color: #171924;
+}
+
+select{
+    -webkit-appearance: none; 
+    box-shadow: none !important;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 3rem;
+    border-color: var(--red-icon);
+    padding: 0; 
+    margin-top: 1rem;
+}
+
+.tableContentHeader {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    gap:25rem;
+}
+
+.tableContentHeader div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tableContentData {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25rem;
+    margin-left: 2rem;
+    align-items: center;
+}
+
+.tableContentData div {
+    margin-top: 2rem;
+}
+
+.tableContentDataCol1 p {
+}
+
+.tableContentDataCol2 p {
+}
+
+.buttons {
+    gap: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+.buttons button {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color:  rgb(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 5rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+}
+
+.buttons button:hover {
+    background-color: var(--dark-bg);
+    border: 2px solid black;
+    cursor: pointer;
+}
+

@@ -46,6 +46,7 @@ export function LoginForm() {
             event.preventDefault();
 
             try {
+            // eslint-disable-next-line no-unused-vars
             const { data, error } = await supabase.auth.signInWithPassword({
                 email: userEmail,
                 password: userPassword
@@ -53,6 +54,8 @@ export function LoginForm() {
 
             if(data) {
                 navigate("/config")
+                const {data: { session },} = await supabase.auth.getSession()
+                console.log(session);
             }
 
         } catch (error) {
