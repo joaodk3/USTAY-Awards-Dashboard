@@ -7,22 +7,29 @@ export function ConfigForm() {
 
   const navigate = useNavigate();
   const [fetchError, setFectchError] = useState("");
-  const [sales, setSales] = useState([]); 
-
+  const [salesData, setSalesData] = useState([]); 
+  const [names, setNames] = useState([]);
+  const [dates, setDates] = useState([]);
+  const [totalAmount, setTotalAmount] = useState([]);
+  
   //Retrieve Sales from database
-  useEffect( () => {
-    getSales();
+  useEffect(() => {
+    getNames();
   }, [])
-
-  async function getSales() {
-    try { 
+  
+  async function getNames() {
+    
+    try {
       let { data: sales, error } = await supabase
       .from('sales')
-      .select('*');
-        
+      .select('name')
+      .eq('date', 'October-23')
+      .order('name');
+      
       if(error) throw error;
-      if(sales !=null) {
-        setSales(sales);
+
+      if(sales != null) {
+        setNames(sales);
       }
 
     } catch (error) {
@@ -30,16 +37,113 @@ export function ConfigForm() {
     }
   }
 
+
+  // Retreive all dates
+  useEffect(() => {
+    getDate()
+  }, []);
+
+  async function getDate() {
+    try {
+
+      let { data: sales, error } = await supabase
+      .from('sales')
+      .select('date')
+
+      if(error) throw error;
+
+      if(sales != null) {
+        setDates(sales);
+      }
+
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  //Set unique dates to be used on the dropdown date filter
+  const uniqueDates = Array.from(new Set(dates.map(date => date.date)));
+
+
+  //Monitor the state of the dropdown (initially read it, after update it)
+  const [dropdownValue, setDropdownValue] = useState({});
+
+  function handleChangeDrop(event) {
+      setDropdownValue({
+              value: event.target.value
+            })
+  }
+
+  //Retrieve Sales data to be used on the specific dropdown value filter
+  useEffect(() => {
+    getSales();
+  }, [dropdownValue])
+  
+  async function getSales() {
+    
+    try {
+      let { data: sales, error } = await supabase
+      .from('sales')
+      .select('*')
+      .eq('date', dropdownValue.value)
+      .order('name')
+      
+      if(error) throw error;
+
+      if(sales != null) {
+        setSalesData(sales);
+      }
+
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getTotalAmount();
+  }, [])
+
+  async function getTotalAmount() {
+    try {
+
+      const { data, error } = await supabase.rpc('get_total_sales')
+      
+
+      if(error) throw error;
+
+      if(data != null) {
+        setTotalAmount(data);
+      }
+
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+console.log(dropdownValue);
+
+
+
   // Handle Buttons Events
   async function logOut() {
     // eslint-disable-next-line no-unused-vars
     const { error } = await supabase.auth.signOut()
     navigate('/')
-    }
+  }
+  
+  async function changeViewMode() {
+    return null;
+  }
+
+  async function saveData() {
+    return null;
+  }
+  
 
     return (
 
         <div>
+  
             <div className = {styles.table}>
 
               <div className ={styles.tableHeader}> 
@@ -53,78 +157,101 @@ export function ConfigForm() {
               </div>
 
               <div className ={styles.tableContent}>
+                
                 <div className = {styles.tableContentHeader}>
                   <div>
                     <p> Name </p>
-                    <img src='../static/images/dropdown.svg'/>
                   </div>
 
                   <div>
-                    <select>
-                      <option value='october-23'> October-23 </option>
-                      <option value='september-23'> September-23 </option>
-                      <option value='august-23'> August-23 </option>
+                    <select onChange={handleChangeDrop}>
+                      <option name='default' key='defaultOption' value='default'> Date Choice </option>
+                      {uniqueDates.map((date, index) =>
+                      <option name='value' key={date[index]} value={date}> {date} </option>
+                      )};
                     </select>
                     <img src='../static/images/dropdown.svg'/>
                   </div>
 
                   <div>
                     <p> Valor Total </p>
-                    <img src='../static/images/dropdown.svg'/>
                   </div>
 
                 </div>
 
                 <div className = {styles.tableContentData}>
 
-                <div className = {styles.tableContentDataCol1}>
-                  {sales.map((user) => {
-                      return (
-                        // eslint-disable-next-line react/jsx-key
-                        <div>
-                          <p> 👤 {user.name} </p>
-                        </div>
-                      )
-                  })}
+                    <div className={styles.col1}>
+                    
+                      {names.map((n) => {
+                        return (
+                          <div key={n.id}>
+                            <p> 👤 {n.name} </p>
+                          </div>
+                        )
+                      })}
+
+                    </div>
+
+                    <div className={styles.col2}>
+
+                    {salesData.map((s) => {
+                          
+                          if(dropdownValue.value !== 'default') {
+                            return (
+                                <div key={s.id}>
+                                  <p> 💸 ${s.month_comission} </p>
+                                </div>
+                              )
+                          } else {
+                              return (
+                                <div key={s.id}>
+                                  <p> 💸 $0 </p>
+                                </div>
+                              )
+                          }
+                    })}
+
+                    </div>  
+
+                    <div className={styles.col3}>
+                    
+                      {totalAmount.map((s) => {
+
+                            if(dropdownValue.value !== 'default') {
+                            return (
+                                <div key={s.id}>
+                                  <p> 💰 ${s.total_sales} </p>
+                                </div>
+                              )
+                            } else {
+                              return (
+                                <div key={s.id}>
+                                  <p> 💰 $0 </p>
+                                </div>
+                              )
+                            }
+                      })}
+
+                    </div>
 
                 </div>
-
-                <div className = {styles.tableContentDataCol2}>
-                  {sales.map((user) => {
-                    return (
-                      // eslint-disable-next-line react/jsx-key
-                      <div>
-                        <p> 💸 ${user.month_comission} </p>
-                      </div>
-                    )
-                  })}
-                </div>
-
-                <div className = {styles.tableContentDataCol3}>
-                  {sales.map((user) => {
-                    return (
-                      // eslint-disable-next-line react/jsx-key
-                      <div>
-                        <p> 💰 ${user.total_sales} </p>
-                      </div>
-                    )
-                  })}
-                </div>
-
-                </div>
-
-              </div>
 
               <div className={styles.buttons}>
 
                 <button onClick={logOut}> Log out </button> 
-                <button> Save </button> 
-                <button> Edit Mode </button>
+                <button onClick={saveData}> Save </button> 
+                <button onClick={changeViewMode}> Edit Mode </button>
+                <button onClick={changeViewMode} 
+                id={styles.viewMode}> View Mode </button>
 
               </div>
-              
-            </div>
-  
-        </div>
+
+          </div>
+
+      </div>
+
+      </div>
+      
     )
 }

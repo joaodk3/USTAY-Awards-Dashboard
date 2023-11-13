@@ -41,6 +41,11 @@
     cursor: pointer;
 }
 
+.submit:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+}
+
 @media (min-width: 390px) {
     .loginHeader h1 {
         font-size: 1.5rem;

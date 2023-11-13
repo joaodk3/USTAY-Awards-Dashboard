@@ -2,10 +2,12 @@ import styles from './loginForm.module.css';
 import { useState } from 'react';
 import { supabase } from '../client';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 export function LoginForm() {
 
     const navigate = useNavigate();
+    const notify = () => toast("Login Successful");
 
     const [formData, setFormData] = useState({
         email: '',
@@ -65,7 +67,6 @@ export function LoginForm() {
         }
     }
 
-
     return (  
             <div className = {styles.loginContainer}>
 
@@ -78,7 +79,7 @@ export function LoginForm() {
                         <form className = {styles.loginForm} onSubmit={handleSubmit}>
                                 <input className={styles.input} type='email' id='loginEmail' placeholder='Email' name='email' onChange={handleChange}/>
                                 <input className={styles.input} type='password' id='loginPassword' placeholder='Password' name='password' onChange={handleChange}/>
-                                <input className={styles.submit} type='submit' id='submitForm' />
+                                <input className={styles.submit} type='submit' id='submitForm' onClick={notify} />
                         </form>
                     </div>
                 </div> 
