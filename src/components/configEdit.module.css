@@ -1,0 +1,86 @@
+.editForm {
+}
+
+
+.partnerSelect {
+    display: flex;
+    align-items: center;
+    gap:3rem;
+
+}
+
+.partnerSelect select {
+    background-color:  rgb(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem;
+}
+
+.partnerSelect select:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+}
+
+.partnerSelect select option {
+    text-align: center;
+}
+
+.partnerValues {
+    gap: 3rem;
+}
+
+.textValue input, .numericValue input, .numberValue input{
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.055);
+}
+
+.textValue input, .numericValue input {
+    width: 10rem;
+}
+
+.partnerValues input {
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.numberValue input {
+    width: 5rem;
+    text-align: center;
+}
+
+
+.submit input {
+    border: none;
+    background-color:  rgb(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+    margin-left: 0rem;
+
+}
+
+.buttons {
+    gap: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+button {
+    border: none;
+    background-color:  rgb(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+}

@@ -87,7 +87,3 @@ hr {
     background-color: rgba(255, 255, 255, 0.055);
     cursor: pointer;
 }
-
-#viewMode {
-    display: none;
-}

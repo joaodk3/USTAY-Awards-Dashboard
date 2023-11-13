@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { Login } from './pages/login';
 import { Config } from './pages/config';
+import { ConfigEdit } from './pages/configEdit';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
   {
     path: "/config",
     element: <Config />,
+  },
+
+  {
+    path: "/configEdit",
+    element: <ConfigEdit />,
   }
 ]);
 

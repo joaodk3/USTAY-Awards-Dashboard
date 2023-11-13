@@ -119,11 +119,6 @@ export function ConfigForm() {
       alert(error.message);
     }
   }
-
-console.log(dropdownValue);
-
-
-
   // Handle Buttons Events
   async function logOut() {
     // eslint-disable-next-line no-unused-vars
@@ -132,12 +127,9 @@ console.log(dropdownValue);
   }
   
   async function changeViewMode() {
-    return null;
+    navigate('/configEdit')
   }
 
-  async function saveData() {
-    return null;
-  }
   
 
     return (
@@ -239,11 +231,11 @@ console.log(dropdownValue);
 
               <div className={styles.buttons}>
 
-                <button onClick={logOut}> Log out </button> 
-                <button onClick={saveData}> Save </button> 
-                <button onClick={changeViewMode}> Edit Mode </button>
-                <button onClick={changeViewMode} 
-                id={styles.viewMode}> View Mode </button>
+                <button onClick={logOut}
+                id={styles.btnLogOut}> Log out </button> 
+
+                <button onClick={changeViewMode}
+                id={styles.btnEditMode}> Edit Mode </button>
 
               </div>
 
