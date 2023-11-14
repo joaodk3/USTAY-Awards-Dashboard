@@ -2,10 +2,13 @@ import styles from './configEdit.module.css';
 import { supabase } from '../client';
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export function ConfigEditForm() {
 
+    const navigate = useNavigate();
     const [names, setNames] = useState([]);
     const [tableInput, setTableInput] = useState({
         name: '',
@@ -19,6 +22,7 @@ export function ConfigEditForm() {
         eb3: '',
         month_comission: ''
     })
+    
 
     function handleChange(event) {
         setTableInput((prevFormData) => {
@@ -54,76 +58,10 @@ export function ConfigEditForm() {
     }
 
     async function submitData() {
-
-        let name = tableInput.name;
-        let date = tableInput.month;
-        let status_change = tableInput.status_change;
-        let esl_cc = tableInput.esl_or_cc;
-        let undergraduate = tableInput.undergraduate;
-        let graduate = tableInput.graduate;
-        let visa = tableInput.visa;
-        let gc = tableInput.green_card;
-        let eb3 = tableInput.eb3;
-        let month_comission = tableInput.month_comission;
         
-        let errorMessage = 'Please, insert values for: '
-        let isEmpty = false;
+        const notifyError = () => toast.dark("Error submiting the form, check console for more information")
+        const notifySuccess = () => toast.dark("Successfully inserted data")
 
-        //Optimze this horible code
-        if(name.length == '') {
-            errorMessage += 'Name ';
-            isEmpty = true;
-        }
-
-        if(date.length == '') {
-            errorMessage += 'Date ';
-            isEmpty = true;
-        }
-
-        if(status_change.length == '') {
-            errorMessage += 'Status Change ';
-            isEmpty = true;
-        }
-
-        if(esl_cc.length == '') {
-            errorMessage += 'Esl or CC ';
-            isEmpty = true;
-        }
-
-        if(undergraduate.length == '') {
-            errorMessage += 'Undergraduate ';
-            isEmpty = true;
-        }
-
-        if(graduate.length == '') {
-            errorMessage += 'Graduate ';
-            isEmpty = true;
-        }
-
-        if(visa.length == '') {
-            errorMessage += 'Visa ';
-            isEmpty = true;
-        }
-
-        if(gc.length == '') {
-            errorMessage += 'Green Card ';
-            isEmpty = true;
-        }
-
-        if(eb3.length == '') {
-            errorMessage += 'EB3 ';
-            isEmpty = true;
-        }
-
-        if(month_comission.length == '') {
-            errorMessage += 'Month Commission';
-            isEmpty = true; 
-        }
-        
-        if(isEmpty) {
-            alert(errorMessage);
-        } else {
-        
         const { error } = await supabase
         .from('sales')
         .insert({name: tableInput.name,
@@ -138,15 +76,17 @@ export function ConfigEditForm() {
         month_comission: tableInput.month_comission })
 
         if (error) {
+            notifyError();
             console.log(error);
         } else {
-            alert('Successfully inserted data')
+            notifySuccess();
         }
 
     }
-}
 
-    console.log(tableInput);
+async function viewMode() {
+    navigate('/config')
+}
 
     return (
         <div>
@@ -154,6 +94,8 @@ export function ConfigEditForm() {
             <div className={styles.editForm}>
             
             <form>
+
+                <div className={styles.nameSpan}>
 
                 <div className={styles.partnerSelect}>
                     <label> Select Partner Name: </label>
@@ -165,6 +107,12 @@ export function ConfigEditForm() {
                             )
                         })}
                     </select>
+                </div>
+
+                <div>
+                    <span> Edit Mode </span>
+                </div>
+
                 </div>
 
                 <div className={styles.partnerValues}>
@@ -223,8 +171,16 @@ export function ConfigEditForm() {
                         </label>
                     </div>
 
+                    <div className={styles.formActions}>
+
                     <div className={styles.submit}>
                         <input type='submit' value='Submit' onClick={submitData} />
+                    </div>
+
+                    <div className={styles.submit}>
+                        <button type='button' value='viewMode' onClick={viewMode}> View Mode </button>
+                    </div>
+
                     </div>
 
                 </div>
@@ -233,7 +189,7 @@ export function ConfigEditForm() {
             </form>
 
             </div>
-
+            <ToastContainer />
 
         </div>
     )

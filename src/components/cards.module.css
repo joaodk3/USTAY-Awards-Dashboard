@@ -32,6 +32,11 @@
     border-width: 0.2rem;
 }
 
+.option {
+    display: flex;
+}
+
+
 @media (max-width: 850px) {
     .cardsContent {
         justify-content: center;

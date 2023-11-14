@@ -265,8 +265,9 @@ export function Card() {
                 <div className={styles.option}>
                     <select id='rankingOption' onChange={handleRakingOption}> 
                         <option value='All Time'> All Time </option>
-                        <option value='October'> October </option>
+                        <option value='October-23'> October-23 </option>
                     </select>
+                    <img src='../static/images/dropdown.svg'/>
                 </div>
             </div>
 

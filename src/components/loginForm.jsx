@@ -3,12 +3,11 @@ import { useState } from 'react';
 import { supabase } from '../client';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function LoginForm() {
 
     const navigate = useNavigate();
-    const notify = () => toast("Login Successful");
-
     const [formData, setFormData] = useState({
         email: '',
         password:''
@@ -26,24 +25,11 @@ export function LoginForm() {
     //fix regex
         async function handleSubmit(event) {
 
-        let errorMessage = 'Please provide a valid information for the following field(s):  '
-        let boolError = false;
         let userEmail = formData.email;
         let userPassword = formData.password; 
-        
-        if(!userEmail.length > 0) {
-            errorMessage += "Email ";
-            boolError = true;
-        }
-        
-        if (!userPassword.length > 0) {
-            errorMessage += "Password";
-            boolError = true;
-        }
-        
-        if(boolError) {
-            alert(errorMessage);
-        } else {
+        const notifyBad = () => toast.error('Bad Email or Password', {
+            theme: 'danger',
+        });
 
             event.preventDefault();
 
@@ -55,13 +41,11 @@ export function LoginForm() {
             })
 
             if(data) {
-                navigate("/config")
-                const {data: { session },} = await supabase.auth.getSession()
-                console.log(session);
+                navigate('/config');
             }
 
             if(error) {
-                alert('Wrong Email or Password');
+                notifyBad();
                 navigate('/login');
             }
 
@@ -70,7 +54,6 @@ export function LoginForm() {
         }
     
         }
-    }
 
     return (  
             <div className = {styles.loginContainer}>
@@ -84,10 +67,11 @@ export function LoginForm() {
                         <form className = {styles.loginForm} onSubmit={handleSubmit}>
                                 <input className={styles.input} type='email' id='loginEmail' placeholder='Email' name='email' onChange={handleChange}/>
                                 <input className={styles.input} type='password' id='loginPassword' placeholder='Password' name='password' onChange={handleChange}/>
-                                <input className={styles.submit} type='submit' id='submitForm' onClick={notify} />
+                                <input className={styles.submit} type='submit' id='submitForm' />
                         </form>
                     </div>
                 </div> 
+                <ToastContainer />
             </div>
     )
 }

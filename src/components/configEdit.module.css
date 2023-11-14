@@ -1,4 +1,14 @@
-.editForm {
+.nameSpan { 
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nameSpan span {
+    padding: 0.75rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    background-color: #171924;
 }
 
 
@@ -25,10 +35,6 @@
     text-align: center;
 }
 
-.partnerValues {
-    gap: 3rem;
-}
-
 .textValue input, .numericValue input, .numberValue input{
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.055);
@@ -42,7 +48,7 @@
     border-radius: 8px;
     padding: 0.5rem;
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .numberValue input {
@@ -51,36 +57,28 @@
 }
 
 
-.submit input {
+.submit input, .submit button {
     border: none;
     background-color:  rgb(255, 255, 255, 0.1);
     border-radius: 8px;
     width: 6rem;
     height: 2.5rem;
-    margin-top: 4rem;
     font-size: 1rem;
     margin-left: 0rem;
-
 }
 
-.buttons {
-    gap: 2rem;
-    display: flex;
-    justify-content: flex-start;
+.submit button {
+    margin-top: 1rem;
 }
 
 
-button {
-    border: none;
-    background-color:  rgb(255, 255, 255, 0.1);
-    border-radius: 8px;
-    width: 6rem;
-    height: 2.5rem;
-    margin-top: 4rem;
-    font-size: 1rem;
-}
-
-button:hover {
+.formActions button:hover, .formActions input:hover {
     background-color: rgba(255, 255, 255, 0.055);
     cursor: pointer;
+}
+
+.formActions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
