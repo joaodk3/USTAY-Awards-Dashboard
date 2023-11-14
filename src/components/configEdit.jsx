@@ -62,6 +62,8 @@ export function ConfigEditForm() {
         const notifyError = () => toast.dark("Error submiting the form, check console for more information")
         const notifySuccess = () => toast.dark("Successfully inserted data")
 
+        try {
+
         const { data, error } = await supabase
         .from('sales')
         .insert([
@@ -83,10 +85,14 @@ export function ConfigEditForm() {
             console.log(data);
         }
 
-        if (error) {
-            notifyError();
+        if(error) {
+            notifyError(error);
             console.log(error);
         }
+
+    } catch(error) {
+        console.log(error)
+    }
 
     }
 
