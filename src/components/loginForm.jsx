@@ -60,6 +60,11 @@ export function LoginForm() {
                 console.log(session);
             }
 
+            if(error) {
+                alert('Wrong Email or Password');
+                navigate('/config');
+            }
+
         } catch (error) {
             alert(error)
         }

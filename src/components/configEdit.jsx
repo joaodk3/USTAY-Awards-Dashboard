@@ -29,8 +29,6 @@ export function ConfigEditForm() {
         })
     }
 
-
-
     useEffect(() => {
         getNames();
     }, [])
