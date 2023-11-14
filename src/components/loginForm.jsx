@@ -62,7 +62,7 @@ export function LoginForm() {
 
             if(error) {
                 alert('Wrong Email or Password');
-                navigate('/config');
+                navigate('/login');
             }
 
         } catch (error) {
