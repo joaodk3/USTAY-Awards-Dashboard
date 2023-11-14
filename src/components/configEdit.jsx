@@ -62,24 +62,30 @@ export function ConfigEditForm() {
         const notifyError = () => toast.dark("Error submiting the form, check console for more information")
         const notifySuccess = () => toast.dark("Successfully inserted data")
 
-        const { error } = await supabase
+        const { data, error } = await supabase
         .from('sales')
-        .insert({name: tableInput.name,
-        date: tableInput.month,
-        status_change: tableInput.status_change,
-        esl_cc: tableInput.esl_or_cc,
-        undergraduate: tableInput.undergraduate,
-        graduate: tableInput.graduate,
-        visa: tableInput.visa,
-        gc: tableInput.green_card,
-        eb3: tableInput.eb3,
-        month_comission: tableInput.month_comission })
+        .insert([
+            {name: tableInput.name},
+            {date: tableInput.month},
+            {status_change: tableInput.status_change},
+            {esl_cc: tableInput.esl_or_cc},
+            {undergraduate: tableInput.undergraduate},
+            {graduate: tableInput.graduate},
+            {visa: tableInput.visa},
+            {gc: tableInput.green_card},
+            {eb3: tableInput.eb3},
+            {month_comission: tableInput.month_comission},
+        ])
+        .select()
+
+        if(data) {
+            notifySuccess();
+            console.log(data);
+        }
 
         if (error) {
             notifyError();
             console.log(error);
-        } else {
-            notifySuccess();
         }
 
     }
