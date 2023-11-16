@@ -11,6 +11,8 @@ export function ConfigEditForm() {
     const navigate = useNavigate();
     const [names, setNames] = useState([]);
     const [tableInput, setTableInput] = useState({
+        
+        id: '',
         name: '',
         month:'',
         status_change: '',
