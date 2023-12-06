@@ -12,15 +12,14 @@ export function ConfigEditForm() {
     const [names, setNames] = useState([]);
     const [tableInput, setTableInput] = useState({
         
-        id: '',
         name: '',
-        month:'',
+        date:'',
         status_change: '',
-        esl_or_cc: '',
+        esl_cc: '',
         undergraduate: '',
         graduate: '',
         visa: '',
-        green_card: '',
+        gc: '',
         eb3: '',
         month_comission: ''
     })
@@ -69,15 +68,14 @@ export function ConfigEditForm() {
         const { data, error } = await supabase
         .from('sales')
         .insert([
-            {id: tableInput.id},
             {name: tableInput.name},
-            {date: tableInput.month},
+            {date: tableInput.date},
             {status_change: tableInput.status_change},
-            {esl_cc: tableInput.esl_or_cc},
+            {esl_cc: tableInput.esl_cc},
             {undergraduate: tableInput.undergraduate},
             {graduate: tableInput.graduate},
             {visa: tableInput.visa},
-            {gc: tableInput.green_card},
+            {gc: tableInput.gc},
             {eb3: tableInput.eb3},
             {month_comission: tableInput.month_comission},
         ])
@@ -91,6 +89,7 @@ export function ConfigEditForm() {
         if(error) {
             notifyError(error);
             console.log(error);
+            //error ->  https://www.ustayawards.com/configEdit?name=Isabella+S.&month=October-25&status_change=1&esl_or_cc=1&undergraduate=1&graduate=1&visa=1&green_card=1&eb3=1&month_comission=290.60
         }
 
     } catch(error) {
@@ -134,19 +133,19 @@ async function viewMode() {
 
                     <div className={styles.textValue}>
                         <label> Month: 
-                        <input type="text" name='month' placeholder='October-23' onChange={handleChange}/>
+                        <input type="text" name='date' placeholder='October-23' onChange={handleChange}/>
                         </label>
                     </div>
 
                     <div className={styles.numberValue}>
                         <label> Status Change:
-                            <input type='number'name='status_change' onChange={handleChange} />
+                            <input type='number' name='status_change' onChange={handleChange} />
                         </label>
                     </div>
 
                     <div className={styles.numberValue}>
                         <label> ESL or CC:
-                            <input type='number' name='esl_or_cc' onChange={handleChange}/>
+                            <input type='number' name='esl_cc' onChange={handleChange}/>
                         </label>
                     </div>
 
@@ -170,7 +169,7 @@ async function viewMode() {
 
                     <div className={styles.numberValue}>
                         <label> Green Card:
-                            <input type='number'name='green_card' onChange={handleChange}/>
+                            <input type='number'name='gc' onChange={handleChange}/>
                         </label>
                     </div>
 
