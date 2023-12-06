@@ -189,7 +189,7 @@ async function viewMode() {
                     <div className={styles.formActions}>
 
                     <div className={styles.submit}>
-                        <input type='submit' value='Submit' onClick={submitData} />
+                        <input type='submit' onClick={submitData} />
                     </div>
 
                     <div className={styles.submit}>
