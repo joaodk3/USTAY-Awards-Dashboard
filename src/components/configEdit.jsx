@@ -132,7 +132,7 @@ async function viewMode() {
                 <div className={styles.partnerValues}>
 
                     <div className={styles.textValue}>
-                        <label> Month: 
+                        <label> Month-Year (Month-YY): 
                         <input type="text" name='date' placeholder='October-23' onChange={handleChange}/>
                         </label>
                     </div>
