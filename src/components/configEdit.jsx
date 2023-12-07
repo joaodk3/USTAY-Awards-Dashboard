@@ -68,8 +68,8 @@ export function ConfigEditForm() {
         const { data, error } = await supabase
         .from('sales')
         .insert([
-            {name: tableInput.name},
-            {date: tableInput.date},
+            {name: tableInput.name.toString()},
+            {date: tableInput.date.toString()},
             {status_change: tableInput.status_change},
             {esl_cc: tableInput.esl_cc},
             {undergraduate: tableInput.undergraduate},
