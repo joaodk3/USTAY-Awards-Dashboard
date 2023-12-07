@@ -11,7 +11,6 @@ export function ConfigEditForm() {
     const navigate = useNavigate();
     const [names, setNames] = useState([]);
     const [tableInput, setTableInput] = useState({
-        
         name: '',
         date:'',
         status_change: '',
@@ -62,12 +61,13 @@ export function ConfigEditForm() {
         
         const notifyError = () => toast.dark("Error submiting the form, check console for more information")
         const notifySuccess = () => toast.dark("Successfully inserted data")
+        
 
         try {
 
         const { data, error } = await supabase
         .from('sales')
-        .insert([
+        .upsert([
             { name: tableInput.name },
             { date: tableInput.date },
             { status_change: tableInput.status_change },
@@ -102,7 +102,6 @@ export function ConfigEditForm() {
 async function viewMode() {
     navigate('/config')
 }
-
     return (
         <div>
 
