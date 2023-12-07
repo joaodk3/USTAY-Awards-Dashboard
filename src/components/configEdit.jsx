@@ -57,14 +57,11 @@ export function ConfigEditForm() {
             }
     }
 
-    useEffect(() => {
-        submitData();
-    }, [])
-
     async function submitData() {
         
         const notifyError = () => toast.dark("Error submiting the form, check console for more information")
         const notifySuccess = () => toast.dark("Successfully inserted data")
+        console.log(tableInput)
         
 
         try {
