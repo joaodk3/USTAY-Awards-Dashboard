@@ -73,15 +73,15 @@ export function ConfigEditForm() {
         .from('sales')
         .upsert([
             { name: tableInput.name },
-            { date: tableInput.date },
-            { status_change: tableInput.status_change },
-            { esl_cc: tableInput.esl_cc },
-            { undergraduate: tableInput.undergraduate },
-            { graduate: tableInput.graduate },
-            { visa: tableInput.visa },
-            { gc: tableInput.gc },
-            { eb3: tableInput.eb3 },
-            { month_comission: tableInput.month_comission },
+            { date: tableInput.date},
+            { status_change: parseInt(tableInput.status_change) },
+            { esl_cc: parseInt(tableInput.esl_cc) },
+            { undergraduate: parseInt(tableInput.undergraduate) },
+            { graduate: parseInt(tableInput.graduate) },
+            { visa: parseInt(tableInput.visa) },
+            { gc: parseInt(tableInput.gc) },
+            { eb3: parseInt(tableInput.eb3) },
+            { month_comission: parseFloat(tableInput.month_comission) },
         ])
         .select()
 
