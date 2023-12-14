@@ -228,7 +228,7 @@ export function Card() {
         },
 
         {
-            userName: "Beatriz Rodrigues",
+            userName: "Beatriz R.",
             allTime: {
                 points: "90",
                 College: "0",
@@ -256,7 +256,7 @@ export function Card() {
         },
 
         {
-            userName: "Jessica Aravena",
+            userName: "Jessica A.",
             allTime: {
                 points: "20",
                 College: "0",
