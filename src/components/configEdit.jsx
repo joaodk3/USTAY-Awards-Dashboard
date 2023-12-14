@@ -71,14 +71,14 @@ export function ConfigEditForm() {
         .upsert([
             { name: tableInput.name },
             { date: tableInput.date},
-            { status_change: parseInt(tableInput.status_change) },
-            { esl_cc: parseInt(tableInput.esl_cc) },
-            { undergraduate: parseInt(tableInput.undergraduate) },
-            { graduate: parseInt(tableInput.graduate) },
-            { visa: parseInt(tableInput.visa) },
-            { gc: parseInt(tableInput.gc) },
-            { eb3: parseInt(tableInput.eb3) },
-            { month_comission: parseFloat(tableInput.month_comission) },
+            { status_change: tableInput.status_change },
+            { esl_cc: tableInput.esl_cc },
+            { undergraduate: tableInput.undergraduate },
+            { graduate: tableInput.graduate },
+            { visa: tableInput.visa },
+            { gc: tableInput.gc },
+            { eb3: tableInput.eb3 },
+            { month_comission: tableInput.month_comission },
         ])
         .select()
 
@@ -115,7 +115,7 @@ async function viewMode() {
                 <div className={styles.partnerSelect}>
                     <label> Select Partner Name: </label>
                     <select id='partner' onChange={handleChange} name='name'>
-                        <option> Name </option>
+                        <option key='defaultName'> Name </option>
                         {names.map((n) => {
                             return (
                                 <option key={n.id} value={n.name}> {n.name} </option>
@@ -133,7 +133,7 @@ async function viewMode() {
                 <div className={styles.partnerValues}>
 
                     <div className={styles.textValue}>
-                        <label> Month-Year (Month-YY): 
+                        <label> Date(Month-YY): 
                         <input type="text" name='date' placeholder='October-23' onChange={handleChange}/>
                         </label>
                     </div>
@@ -189,7 +189,7 @@ async function viewMode() {
                     <div className={styles.formActions}>
 
                     <div className={styles.submit}>
-                        <input type='submit' onClick={submitData} />
+                        <button type='button' value='submit' onClick={submitData}> Submit </button>
                     </div>
 
                     <div className={styles.submit}>
