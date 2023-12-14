@@ -25,6 +25,7 @@ export function Card() {
               Visa: "2",
               EB3: "0",
               GreenCard: "0",
+              RFE: "0",
               image: "",
             },
             november: {
@@ -36,6 +37,7 @@ export function Card() {
               Visa: "0",
               EB3: "0",
               GreenCard: "0",
+              RFE: "0",
               image: "",
             },
         },
@@ -51,6 +53,7 @@ export function Card() {
                 Visa: "2",
                 EB3: "0",
                 GreenCard: "1",
+                RFE: "1",
                 image: "",
             },
             november: {
@@ -62,6 +65,7 @@ export function Card() {
                 Visa: "2",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "1",
                 image: "",
             },
         },
@@ -77,6 +81,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -88,7 +93,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
- 
+                RFE: "0",
                 image: "",
           },
         },
@@ -104,6 +109,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -115,6 +121,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "0",
                 image: "",
         },
         },
@@ -130,6 +137,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "0",
                 image: "",
             }, 
             november: {
@@ -141,6 +149,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
+                RFE: "0",
                 image: "",
             },
         },
@@ -156,6 +165,7 @@ export function Card() {
             Visa: "0",
             EB3: "0",
             GreenCard: "0",
+            RFE: "0",
             image: "",
         },
         november: {
@@ -167,6 +177,7 @@ export function Card() {
             Visa: "0",
             EB3: "0",
             GreenCard: "0",
+            RFE: "0",
             image: "",
         },
         },
@@ -182,7 +193,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -194,7 +205,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
         },
@@ -210,7 +221,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -222,7 +233,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
         },
@@ -238,7 +249,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -250,7 +261,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
         },
@@ -266,7 +277,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
             november: {
@@ -278,7 +289,7 @@ export function Card() {
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                Amount: "0",
+                RFE: "0",
                 image: "",
             },
         }
@@ -320,7 +331,7 @@ export function Card() {
                 <div className={styles.option}>
                     <select id='rankingOption' onChange={handleRakingOption}> 
                         <option value='All Time'> All Time </option>
-                        <option value='November-23'> november-23 </option>
+                        <option value='November-23'> November-23 </option>
                     </select>
                     <img src='../static/images/dropdown.svg'/>
                 </div>
@@ -339,6 +350,7 @@ export function Card() {
                     Visa={rankingOption === 'All Time' ? card.allTime.Visa : card.november.Visa}
                     EB3={rankingOption === 'All Time' ? card.allTime.EB3 : card.november.EB3}
                     GreenCard={rankingOption === 'All Time' ? card.allTime.GreenCard : card.november.GreenCard}
+                    RFE={rankingOption === 'All Time' ? card.allTime.RFE : card.november.RFE}
                     image={rankingOption === 'All Time' ? card.allTime.image : card.november.image}
                     />
                     ))}

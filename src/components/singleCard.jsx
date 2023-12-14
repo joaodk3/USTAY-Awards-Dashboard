@@ -47,6 +47,11 @@ export function SingleCard(props) {
                         <span> {props.GreenCard} </span>
                     </div>
 
+                    <div>
+                        <span> RFE </span> 
+                        <span> {props.RFE} </span>
+                    </div>
+
                 </div>
             </div>
         </div>
