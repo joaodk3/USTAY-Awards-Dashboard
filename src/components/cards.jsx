@@ -292,7 +292,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-        }
+        },
 
         {
             userName: "Larissa M.",
