@@ -17,7 +17,7 @@ export function Board() {
         <div>
             <LeadBoard
              thisMonth = "December"
-             lastMonth = "Novembere"
+             lastMonth = "November"
              penultimateMonth = "October"
 
              thisMonthFirstPlace = "Welson S."
