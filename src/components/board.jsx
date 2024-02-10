@@ -16,17 +16,17 @@ export function Board() {
 
         <div>
             <LeadBoard
-             thisMonth = "December"
-             lastMonth = "November"
-             penultimateMonth = "October"
+             thisMonth = "January"
+             lastMonth = "December"
+             penultimateMonth = "November"
 
-             thisMonthFirstPlace = "Welson S."
-             thisMonthSecondPlace = "Alexia S."
-             thisMonthThirdPlace = "Gabriela F."
+             thisMonthFirstPlace = "Alexia S."
+             thisMonthSecondPlace = "Yolanda"
+             thisMonthThirdPlace = "Ana Luisa S."
 
-             lastMonthFirstPlace = "Alexia S."
-             lastMonthSecondPlace = "Gabriela F."
-             lastMonthThirdPlace = "Ana Luisa S."
+             lastMonthFirstPlace = "Welson S."
+             lastMonthSecondPlace = "Alexia S."
+             lastMonthThirdPlace = "Gabriela F."
 
              penultimateMonthFirstPlace = "Alexia S."
              penultimateMonthSecondPlace = "Gabriela F."
