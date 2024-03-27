@@ -28,7 +28,7 @@ export function Card() {
               RFE: "0",
               image: "",
             },
-            january: {
+            february: {
               points: "0",
               College: "0",
               Graduate: "0",
@@ -45,27 +45,27 @@ export function Card() {
         {
             userName: "Alexia S.",
             allTime: {
-                points: "2046.00",
+                points: "2206.00",
                 College: "0",
                 Graduate: "0",
-                ESL_CC: "19",
-                StatusChange: "23",
-                Visa: "3",
-                EB3: "0",
-                GreenCard: "1",
-                RFE: "1",
-                image: "",
-            },
-            january: {
-                points: "730.00",
-                College: "0",
-                Graduate: "0",
-                ESL_CC: "7",
-                StatusChange: "9",
-                Visa: "1",
+                ESL_CC: "22",
+                StatusChange: "24",
+                Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
-                RFE: "0",
+                RFE: "2",
+                image: "",
+            },
+            february: {
+                points: "160.00",
+                College: "0",
+                Graduate: "0",
+                ESL_CC: "3",
+                StatusChange: "1",
+                Visa: "0",
+                EB3: "0",
+                GreenCard: "0",
+                RFE: "1",
                 image: "",
             },
         },
@@ -73,18 +73,18 @@ export function Card() {
         {
             userName: "Isabella S", 
             allTime: {
-                points: "123.50",
+                points: "143.50",
                 College: "0",
                 Graduate: "0",
                 ESL_CC: "2",
-                StatusChange: "3",
+                StatusChange: "4",
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "20",
                 College: "0",
                 Graduate: "0",
@@ -112,7 +112,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "40",
                 College: "0",
                 Graduate: "0",
@@ -140,12 +140,12 @@ export function Card() {
                 RFE: "0",
                 image: "",
             }, 
-            january: {
-                points: "20",
+            february: {
+                points: "0",
                 College: "0",
                 Graduate: "0",
                 ESL_CC: "0",
-                StatusChange: "1",
+                StatusChange: "0",
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
@@ -157,18 +157,18 @@ export function Card() {
         {
         userName: "Welson S.",
         allTime: {
-            points: "260",
+            points: "280",
             College: "0",
             Graduate: "0",
             ESL_CC: "0",
-            StatusChange: "3",
+            StatusChange: "4",
             Visa: "0",
             EB3: "1",
             GreenCard: "0",
             RFE: "0",
             image: "",
         },
-        january: {
+        february: {
             points: "20",
             College: "0",
             Graduate: "0",
@@ -196,7 +196,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "0",
                 College: "0",
                 Graduate: "0",
@@ -224,7 +224,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "0",
                 College: "0",
                 Graduate: "0",
@@ -252,7 +252,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "0",
                 College: "0",
                 Graduate: "0",
@@ -280,12 +280,12 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
-                points: "40",
+            february: {
+                points: "0",
                 College: "0",
                 Graduate: "0",
                 ESL_CC: "0",
-                StatusChange: "2",
+                StatusChange: "0",
                 Visa: "0",
                 EB3: "0",
                 GreenCard: "0",
@@ -308,7 +308,7 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
+            february: {
                 points: "0",
                 College: "0",
                 Graduate: "0",
@@ -336,14 +336,14 @@ export function Card() {
                 RFE: "0",
                 image: "",
             },
-            january: {
-                points: "260",
+            february: {
+                points: "0",
                 College: "0",
                 Graduate: "0",
                 ESL_CC: "1",
-                StatusChange: "1",
+                StatusChange: "0",
                 Visa: "0",
-                EB3: "1",
+                EB3: "0",
                 GreenCard: "0",
                 RFE: "0",
                 image: "",
@@ -352,8 +352,8 @@ export function Card() {
     ];
 
     const sortedCardData = cardData.slice().sort((a, b) => {
-            const pointsA = rankingOption === 'All Time' ? a.allTime.points : a.january.points;
-            const pointsB = rankingOption === 'All Time' ? b.allTime.points : b.january.points;
+            const pointsA = rankingOption === 'All Time' ? a.allTime.points : a.february.points;
+            const pointsB = rankingOption === 'All Time' ? b.allTime.points : b.february.points;
             return pointsB - pointsA;
         }
     );
@@ -363,16 +363,16 @@ export function Card() {
     sortedCardData.forEach((card, index) => {
         if (index === 0) {
             card.allTime.image = 'static/images/badge1.svg';
-            card.january.image = 'static/images/badge1.svg';
+            card.february.image = 'static/images/badge1.svg';
         } else if (index === 1) {
             card.allTime.image = 'static/images/badge2.svg';
-            card.january.image = 'static/images/badge2.svg';
+            card.february.image = 'static/images/badge2.svg';
         } else if (index === 2) {
             card.allTime.image = 'static/images/badge3.svg';
-            card.january.image = 'static/images/badge3.svg';
+            card.february.image = 'static/images/badge3.svg';
         } else {
             card.allTime.image = 'static/images/badge0.svg';
-            card.january.image = 'static/images/badge0.svg';
+            card.february.image = 'static/images/badge0.svg';
         }
     });
 
@@ -381,13 +381,13 @@ export function Card() {
         <div className={styles.cards}>
             
             <div className={styles.cardHeader}>
-                <h2> {rankingOption === 'All Time' ? 'All Time Raking' : 'January Ranking'} </h2>
+                <h2> {rankingOption === 'All Time' ? 'All Time Raking' : 'February Ranking'} </h2>
                 <span> 🏆 </span>
 
                 <div className={styles.option}>
                     <select id='rankingOption' onChange={handleRakingOption}> 
                         <option value='All Time'> All Time </option>
-                        <option value='January-23'> January-23 </option>
+                        <option value='February-23'> February-23 </option>
                     </select>
                     <img src='../static/images/dropdown.svg'/>
                 </div>
@@ -398,16 +398,16 @@ export function Card() {
                     <SingleCard
                     key={index}
                     userName={card.userName}
-                    points={rankingOption === 'All Time' ? card.allTime.points : card.january.points}
-                    College={rankingOption === 'All Time' ? card.allTime.College : card.january.College}
-                    Graduate={rankingOption === 'All Time' ? card.allTime.Graduate : card.january.Graduate}
-                    ESL_CC={rankingOption === 'All Time' ? card.allTime.ESL_CC : card.january.ESL_CC}
-                    StatusChange={rankingOption === 'All Time' ? card.allTime.StatusChange : card.january.StatusChange}
-                    Visa={rankingOption === 'All Time' ? card.allTime.Visa : card.january.Visa}
-                    EB3={rankingOption === 'All Time' ? card.allTime.EB3 : card.january.EB3}
-                    GreenCard={rankingOption === 'All Time' ? card.allTime.GreenCard : card.january.GreenCard}
-                    RFE={rankingOption === 'All Time' ? card.allTime.RFE : card.january.RFE}
-                    image={rankingOption === 'All Time' ? card.allTime.image : card.january.image}
+                    points={rankingOption === 'All Time' ? card.allTime.points : card.february.points}
+                    College={rankingOption === 'All Time' ? card.allTime.College : card.february.College}
+                    Graduate={rankingOption === 'All Time' ? card.allTime.Graduate : card.february.Graduate}
+                    ESL_CC={rankingOption === 'All Time' ? card.allTime.ESL_CC : card.february.ESL_CC}
+                    StatusChange={rankingOption === 'All Time' ? card.allTime.StatusChange : card.february.StatusChange}
+                    Visa={rankingOption === 'All Time' ? card.allTime.Visa : card.february.Visa}
+                    EB3={rankingOption === 'All Time' ? card.allTime.EB3 : card.february.EB3}
+                    GreenCard={rankingOption === 'All Time' ? card.allTime.GreenCard : card.february.GreenCard}
+                    RFE={rankingOption === 'All Time' ? card.allTime.RFE : card.february.RFE}
+                    image={rankingOption === 'All Time' ? card.allTime.image : card.february.image}
                     />
                     ))}
             </div>
